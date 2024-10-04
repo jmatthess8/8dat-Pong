@@ -1,0 +1,84 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #fdfd96, #ffb347, #ff6961, #ffcccb, #d1cfe2, #aec6cf);
+  background-size: 400% 400%;
+  animation: psychedelicBackground 8s ease infinite;
+}
+
+@keyframes psychedelicBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Game container */
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: black;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Canvas with TV static background */
+#pongCanvas {
+  background-image: url('static.gif');  /* TV static gif for the background */
+  background-size: cover;
+  border: 2px solid white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6);
+}
+
+/* Button */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #00f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #ff6600;
+}
+
+/* Rainbow paddles */
+.paddle {
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 200% 200%;
+  animation: rainbowPaddles 3s linear infinite;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes rainbowPaddles {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
